@@ -1,0 +1,54 @@
+.login {  
+    text-align: center;
+    text-decoration: none;
+    margin-top: 150px;
+  }
+  #username {    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  #email {  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+
+  #registrarse {  
+    margin-top: 100px;
+  }
+
+  #password {  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+
+  #confirmar {  
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+
+  form{
+      margin: 0px 16px;
+  }
+
+  div.form-group input.invalid{
+      border: 1px solid #dc3545;
+  }
+
+  div.form-gropu label:first-child{
+      text-transform: uppercase;
+      font-size: 0.9rem;
+  }
+
+  #card{
+    margin-top: 100px;
+    background-color: white;
+}
+
+#logearse{
+    margin-top: 50px;
+}

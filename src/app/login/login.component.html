@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <section id="register">
+    <div class="container">
+      <div class="row">
+        <div class="clo-xs-12 col-sm-6 col-md-4 mx-auto">
+          <div class="card_register">
+            <div id="card" class="card">
+              <div class="card-body text-center">
+                <form [formGroup]="formLogin" novalidate class="mb-4" autocomplete="off">
+                  <div class="register">
+                    <div id="username">
+                      <input class="form-control" type="text" name="username" placeholder="Nombre de usuario"
+                        [(ngModel)]="formLogin.username" formControlName="username">
+                    </div>
+                    <div id="email">
+                      <input class="form-control" type="text" name="email" placeholder="Email"
+                        [(ngModel)]="formLogin.email" formControlName="email">
+                    </div>
+                    <div id="password">
+                      <input class="form-control" type="password" name="password" placeholder="Contraseña"
+                        [(ngModel)]="formLogin.password" formControlName="password">
+                    </div>
+                    <button id="logearse" type="submit" class="btn btn-primary"
+                      (click)="submitLogin(mymodal)">Iniciar sesión</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Nombre de usuario o contraseña incorrecta
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" 
+        (click)="modal.close('Save click')">Cerrar</button>
+      </div>
+    </div>
+  </ng-template>
+</body>
+</html>
